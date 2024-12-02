@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import {ObjectId} from "mongoose";
 
 export interface IUser {
   username: string;
@@ -7,11 +7,11 @@ export interface IUser {
   token: string;
 }
 
-type TStatus = "new" | "in_progress" | "complete";
-
 export interface ITask {
-  user: Schema.Types.ObjectId;
+  user: ObjectId
   title: string;
-  description?: string;
-  status: TStatus;
+  date: string;
+  description: string;
+  priority: string;
+  status: string;
 }

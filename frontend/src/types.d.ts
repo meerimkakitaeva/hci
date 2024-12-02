@@ -28,7 +28,9 @@ export interface ITask {
   },
   title: string;
   description?: string;
-  status: string;
+  status?: string;
+  priority?: string;
+  date?: string;
 }
 
 export type TTaskMutation = Omit<ITask, "_id" | "user">;

@@ -1,6 +1,6 @@
-import mongoose, { Schema, Types } from "mongoose";
-import { User } from "./User";
-import { ITask } from "../types";
+import mongoose, {Schema, Types} from "mongoose";
+import {User} from "./User";
+import {ITask} from "../types";
 
 const taskSchema = new Schema<ITask>({
   user: {
@@ -16,10 +16,16 @@ const taskSchema = new Schema<ITask>({
     type: String,
     required: true,
   },
+  date: {
+    type: String,
+  },
   description: String,
-  status: {
+  priority: {
     type: String,
     required: true,
+  },
+  status: {
+    type: String,
   },
 });
 

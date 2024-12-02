@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import {
     Avatar,
     Box,
@@ -12,20 +12,17 @@ import {
     Typography,
 } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CategoryIcon from "@mui/icons-material/Category";
 import SettingsIcon from "@mui/icons-material/Settings";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { fetchTasks } from "../features/tasks/tasksThunk";
-import { useNavigate, useLocation } from "react-router-dom";
+import {useAppDispatch, useAppSelector} from "../app/hooks";
+import {fetchTasks} from "../features/tasks/tasksThunk";
+import {useLocation, useNavigate} from "react-router-dom";
 
 const menuItems = [
-    { text: "Dashboard", icon: <DashboardIcon />, link: "/tasks" },
-    { text: "Vital Task", icon: <CheckCircleIcon />, link: "/vital-task" },
-    { text: "My Task", icon: <CheckCircleIcon />, link: "/my-task" },
-    { text: "Task Categories", icon: <CategoryIcon />, link: "/task-categories" },
+    { text: "My tasks", icon: <DashboardIcon />, link: "/tasks" },
+    { text: "Vitest tasks", icon: <CategoryIcon />, link: "/vitest" },
     { text: "Settings", icon: <SettingsIcon />, link: "/settings" },
     { text: "Help", icon: <HelpOutlineIcon />, link: "/help" },
 ];
@@ -57,6 +54,7 @@ const Sidebar = () => {
                     boxSizing: "border-box",
                     backgroundColor: "#1E1E2F",
                     color: "white",
+                    paddingTop: "85px"
                 },
             }}
         >

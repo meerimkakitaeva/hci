@@ -5,6 +5,7 @@ import Login from "./features/user/Login";
 import Tasks from "./features/tasks/Tasks";
 import Registration from "./features/user/Registration";
 import Help from "./pages/Help";
+import ExtremeTasks from "./pages/ExtremeTasks";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
           <Route path="/" element={<Registration />} />
           <Route path="/login" element={<Login />} />
           <Route path="/tasks" element={<Tasks />} />
-            <Route path="/help" element={<Help />} />
+          <Route path="/vitest" element={<ExtremeTasks />} />
+          <Route path="/help" element={<Help />} />
         </Routes>
       </Layout>
     </div>
