@@ -108,5 +108,6 @@ export const tasksSlice = createSlice({
 export const tasksReducer = tasksSlice.reducer;
 export const { onOpen, onClose, cleanOneTask } = tasksSlice.actions;
 export const selectOneTask = (state: RootState) => state.tasksStore.oneTask;
-
+export const selectTasks = (state: RootState) => state.tasksStore.tasks;
 export const selectIsOpen = (state: RootState) => state.tasksStore.isOpen;
+export const taskLoading = (state: RootState) => state.tasksStore.fetchOneLoading;

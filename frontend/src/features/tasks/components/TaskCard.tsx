@@ -21,24 +21,24 @@ const TaskCard: React.FC<TaskCardProps> = ({ _id, title, description, priority, 
     const getPriorityColor = (priority: string | undefined) => {
         switch (priority) {
             case "extreme":
-                return "red";  // Красный
+                return "red";
             case "moderate":
-                return "blue";  // Голубой
+                return "blue";
             case "low":
-                return "green";  // Зеленый
+                return "green";
             default:
-                return "black";  // Без цвета
+                return "black";
         }
     };
 
     const getStatusColor = (status: string | undefined) => {
         switch (status) {
             case "completed":
-                return "green";  // Зеленый
+                return "green";
             case "in progress":
-                return "blue";  // Голубой
+                return "blue";
             default:
-                return "grey";  // Серый
+                return "grey";
         }
     };
 

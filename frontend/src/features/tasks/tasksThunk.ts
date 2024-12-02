@@ -8,6 +8,9 @@ export const createTask = createAsyncThunk<void, TTaskMutation>(
     const taskData: TTaskMutation = {
       title: data.title,
       status: data.status,
+        description: data.description,
+        priority: data.priority,
+        date: data.date,
     };
 
     if (data.description) {
@@ -68,6 +71,8 @@ export const editTask = createAsyncThunk<void, TTaskMutationWithoutUser>(
       title: ITask.title,
       status: ITask.status,
       description: ITask.description,
+        priority: ITask.priority,
+        date: ITask.date,
     };
 
     await axiosApi.put("tasks/" + id, task, {

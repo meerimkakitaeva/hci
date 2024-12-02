@@ -68,8 +68,6 @@ taskRouter.put("/:id", auth, async (req, res) => {
 
         const statusFields = ["not started", "in progress", "completed"];
         const priorityFields = ["extreme", "moderate", "low"];
-
-
         if (
             req.body.priority &&
             task.priority &&

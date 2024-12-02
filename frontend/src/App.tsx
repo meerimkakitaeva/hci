@@ -6,6 +6,8 @@ import Tasks from "./features/tasks/Tasks";
 import Registration from "./features/user/Registration";
 import Help from "./pages/Help";
 import ExtremeTasks from "./pages/ExtremeTasks";
+import OneTaskPage from "./pages/OneTaskPage";
+import Form from "./pages/Form";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/vitest" element={<ExtremeTasks />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/tasks/:id" element={<OneTaskPage />} />
+          <Route path="/form" element={<Form />} />
         </Routes>
       </Layout>
     </div>

@@ -25,7 +25,6 @@ const Tasks = () => {
     const inProgressPercentage = (inProgressTasks.length / totalTasks) * 100;
     const notStartedPercentage = (notStartedTasks.length / totalTasks) * 100;
 
-    // Фильтрация задач по запросу поиска
     const filteredTasks = tasks.filter((task) =>
         task.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
