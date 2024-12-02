@@ -4,10 +4,13 @@ import { User } from "../models/User";
 
 const usersRouter = express.Router();
 
+
+
 usersRouter.post("/", async (req, res, next) => {
   try {
     const user = new User({
       username: req.body.username,
+      email: req.body.email,
       password: req.body.password,
     });
 

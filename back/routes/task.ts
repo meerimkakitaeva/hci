@@ -10,7 +10,7 @@ taskRouter.get("/", auth, async (req, res) => {
   try {
     const userId = (req as IRequestWithUser).user._id;
 
-    const tasks: ITask[] = await Task.find({ user: userId });
+    const tasks: ITask[] = await Task.find({ user: userId }).populate("user", "username email");
 
     res.send(tasks);
   } catch (e) {

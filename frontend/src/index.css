@@ -1,0 +1,12 @@
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  height: 100vh;
+  display: block;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

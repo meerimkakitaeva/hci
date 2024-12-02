@@ -15,11 +15,13 @@ const run = async () => {
 
   const firstUser = new User({
     username: "Bob",
+    email: "wer@gmail.com",
     password: "123",
   });
 
   const secondUser = new User({
     username: "John",
+    email: "rt@gmail.com",
     password: "123",
   });
 
@@ -64,6 +66,12 @@ const run = async () => {
       description: "study the react js to become frontend js developer",
       status: "in_progress",
     },
+      {
+        user: secondUser._id,
+        title: "новое задание",
+        description: "study the react js to become frontend js developer",
+        status: "in_progress",
+      },
   );
 
   await db.close();
