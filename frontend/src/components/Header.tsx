@@ -44,7 +44,6 @@ const Header = () => {
                         />
                     </Box>
 
-                    {/* Заменяем кнопку Add на иконку */}
                     <IconButton color="inherit" onClick={() => dispatch(onOpen())}>
                         <AddCircleIcon sx={{ fontSize: 35, color: "#FF6767", marginRight:"10px" }} />
                     </IconButton>
