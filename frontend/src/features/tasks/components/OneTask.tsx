@@ -1,27 +1,15 @@
-import React from 'react';
-import { Box, Typography, IconButton, Divider } from '@mui/material';
+import {Box, Divider, IconButton, Typography} from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-
-export interface ITask {
-    _id: string;
-    user: {
-        username: string;
-        email: string;
-    };
-    title: string;
-    description?: string;
-    status?: string;
-    priority?: string;
-    date?: string;
-}
+import {ITask} from "../../../types";
 
 interface OneTaskProps {
     task: ITask;
     onDelete: () => void;
+    onEdit: () => void;
 }
 
-const OneTask: React.FC<OneTaskProps> = ({ task, onDelete }) => {
+const OneTask: React.FC<OneTaskProps> = ({ task, onDelete, onEdit }) => {
     const getPriorityColor = (priority: string | undefined) => {
         switch (priority) {
             case "extreme":
@@ -49,7 +37,7 @@ const OneTask: React.FC<OneTaskProps> = ({ task, onDelete }) => {
     return (
         <Box
             sx={{
-                maxWidth: 600,
+                width: 700,
                 margin: '0 auto',
                 padding: 3,
                 border: '1px solid #ccc',
@@ -96,7 +84,7 @@ const OneTask: React.FC<OneTaskProps> = ({ task, onDelete }) => {
                 <IconButton color="error" sx={{ marginRight: 1 }} onClick={onDelete}>
                     <DeleteIcon />
                 </IconButton>
-                <IconButton color="primary">
+                <IconButton color="primary" onClick={onEdit}>
                     <EditIcon />
                 </IconButton>
             </Box>

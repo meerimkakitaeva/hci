@@ -25,6 +25,7 @@ export interface ITask {
   user: {
     username: string;
     email: string;
+    _id: string;
   },
   title: string;
   description?: string;

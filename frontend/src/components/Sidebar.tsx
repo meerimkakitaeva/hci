@@ -23,7 +23,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 const menuItems = [
     { text: "My tasks", icon: <DashboardIcon />, link: "/tasks" },
     { text: "Vitest tasks", icon: <CategoryIcon />, link: "/vitest" },
-    { text: "Settings", icon: <SettingsIcon />, link: "/createTask" },
+    { text: "Create task", icon: <SettingsIcon />, link: "/form" },
     { text: "Help", icon: <HelpOutlineIcon />, link: "/help" },
 ];
 

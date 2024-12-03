@@ -32,6 +32,12 @@ const OneTaskPage: React.FC = () => {
         }
     };
 
+    const onEdit = () => {
+        if (id) {
+            navigate(`/tasks/edit/${id}`); // Переход на форму редактирования
+        }
+    };
+
     return (
         <Box
             sx={{
@@ -46,7 +52,7 @@ const OneTaskPage: React.FC = () => {
             {isLoading && <CircularProgress color="primary" />}
 
             {task ? (
-                <OneTask task={task} onDelete={onDelete} />
+                <OneTask task={task} onDelete={onDelete} onEdit={onEdit} />
             ) : (
                 !isLoading && (
                     <Typography variant="h6" color="text.secondary">

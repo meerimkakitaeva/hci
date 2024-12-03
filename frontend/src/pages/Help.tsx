@@ -16,7 +16,7 @@ const Help: React.FC = () => {
                     1. How do I create a task?
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    To create a new task, click on the "Add" button in the top bar, fill out the task details, and hit save.
+                    To create a new task, click on the "Create task" button above, fill out the task details, and hit save.
                 </Typography>
             </Box>
             <Box sx={{ marginBottom: 3 }}>

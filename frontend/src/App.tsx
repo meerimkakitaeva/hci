@@ -21,6 +21,7 @@ function App() {
           <Route path="/help" element={<Help />} />
           <Route path="/tasks/:id" element={<OneTaskPage />} />
           <Route path="/form" element={<Form />} />
+          <Route path="/tasks/edit/:id" element={<Form />} />
         </Routes>
       </Layout>
     </div>
